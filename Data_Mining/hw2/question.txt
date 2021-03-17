@@ -1,0 +1,10 @@
+限制層數，增加node，增加資料相依姓
+詢問到底要探討甚麼?
+如果使用絕對正確的RULE，DT只會產生簡單的RULE
+甚麼是藉由絕對正確產生的RULE ?
+根本不可能產生NOise去探討，還是positive 混入可能產生negative的FEAture的意思
+比如說某一項feature的positive為[2,1]，而negative則寫成[1,0]
+
+
+
+又或者是減少positive條件需求像，比如說原本符合7巷，我麼現在連符合六項也當作positive， 

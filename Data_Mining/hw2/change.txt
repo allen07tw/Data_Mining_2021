@@ -1,0 +1,131 @@
+def new_static_table_Heading_p_gen():
+    new_static_table_Heading_p = static_table_Heading_p.copy()
+    for static_type in new_static_table_Heading_p.keys():
+        for idx, value in enumerate(new_static_table_Heading_p[static_type]):
+            if len(new_static_table_Heading_p[static_type]) == 2:
+                new_static_table_Heading_p[static_type][idx] = static_type_class_negative[idx]
+            else:
+                new_static_table_Heading_p[static_type][idx] = static_type_class[idx]
+    return new_static_table_Heading_p
+
+def new_static_table_Heading_n_gen():
+    new_static_table_Heading_n = static_table_Heading_n.copy()
+    for static_type in new_static_table_Heading_n.keys():
+        for idx, value in enumerate(new_static_table_Heading_n[static_type]):
+            if len(new_static_table_Heading_n[static_type]) == 2:
+                new_static_table_Heading_n[static_type][idx] = static_type_class_negative[idx]
+            else:
+                new_static_table_Heading_n[static_type][idx] = static_type_class[idx]
+    return new_static_table_Heading_n
+
+def new_static_table_Sliding_Tackle_p_gen():
+    new_static_table_Sliding_Tackle_p = static_table_Sliding_Tackle_p.copy()
+    for static_type in new_static_table_Sliding_Tackle_p.keys():
+        for idx, value in enumerate(new_static_table_Sliding_Tackle_p[static_type]):
+            if len(new_static_table_Sliding_Tackle_p[static_type]) == 1:
+                new_static_table_Sliding_Tackle_p[static_type][idx] = static_type_class_weak[idx]
+            else:
+                new_static_table_Sliding_Tackle_p[static_type][idx] = static_type_class[idx]
+    return new_static_table_Sliding_Tackle_p
+
+def new_static_table_Sliding_Tackle_n_gen():
+    new_static_table_Sliding_Tackle_n = static_table_Sliding_Tackle_n.copy()
+    for static_type in new_static_table_Sliding_Tackle_n.keys():
+        for idx, value in enumerate(new_static_table_Sliding_Tackle_n[static_type]):
+            if len(new_static_table_Sliding_Tackle_n[static_type]) == 1:
+                new_static_table_Sliding_Tackle_n[static_type][idx] = static_type_class_negative[idx]
+            else:
+                new_static_table_Sliding_Tackle_n[static_type][idx] = static_type_class[idx]
+    return new_static_table_Sliding_Tackle_n
+
+for player_amount in range(number_positive):   
+    player_static = []
+    new_static_table_Vision_p = new_static_table_Vision_p_gen()
+    for ability_type in new_static_table_Vision_p.keys():
+        player_static.append(choice(new_static_table_Vision_p[ability_type]))
+    all_player_static.append(player_static)
+       
+for player_amount in range(number_negative):   
+    player_static = []
+    new_static_table_Vision_n = new_static_table_Vision_n_gen()
+    for ability_type in new_static_table_Vision_n.keys():
+        player_static.append(choice(new_static_table_Vision_n[ability_type]))
+    all_player_static.append(player_static)
+
+
+for player_amount in range(number_positive):   
+    player_static = []
+    new_static_table_Short_Passing_p = new_static_table_Short_Passing_p_gen()
+    for ability_type in new_static_table_Short_Passing_p.keys():
+        player_static.append(choice(new_static_table_Short_Passing_p[ability_type]))
+    all_player_static.append(player_static)
+       
+for player_amount in range(number_negative):   
+    player_static = []
+    new_static_table_Short_Passing_n = new_static_table_Short_Passing_n_gen()
+    for ability_type in new_static_table_Short_Passing_n.keys():
+        player_static.append(choice(new_static_table_Short_Passing_n[ability_type]))
+    all_player_static.append(player_static)
+
+
+for player_amount in range(number_positive):   
+    player_static = []
+    new_static_table_Dribbling_p = new_static_table_Dribbling_p_gen()
+    for ability_type in new_static_table_Dribbling_p.keys():
+        player_static.append(choice(new_static_table_Dribbling_p[ability_type]))
+    all_player_static.append(player_static)
+       
+for player_amount in range(number_negative):   
+    player_static = []
+    new_static_table_Dribbling_n = new_static_table_Dribbling_n_gen()
+    for ability_type in new_static_table_Dribbling_n.keys():
+        player_static.append(choice(new_static_table_Dribbling_n[ability_type]))
+    all_player_static.append(player_static)
+
+### 'Heading'
+static_table_Heading_p = copy.deepcopy(static_table)
+del static_table_Heading_p['Heading'][1]
+del static_table_Heading_p['Heading'][1]
+
+static_table_Heading_n = copy.deepcopy(static_table)
+del static_table_Heading_n['Heading'][0]
+
+### 'Sliding_Tackle'
+static_table_Sliding_Tackle_p = copy.deepcopy(static_table)
+del static_table_Sliding_Tackle_p['Sliding_Tackle'][1]
+del static_table_Sliding_Tackle_p['Sliding_Tackle'][1]
+
+static_table_Sliding_Tackle_n = copy.deepcopy(static_table)
+del static_table_Sliding_Tackle_n['Sliding_Tackle'][0]
+
+for player_amount in range(number_positive):
+    player_static = []
+    new_static_table_Heading_p = new_static_table_Heading_p_gen()
+    for ability_type in new_static_table_Heading_p.keys():
+        player_static.append(choice(new_static_table_Heading_p[ability_type]))
+    all_player_static.append(player_static)
+
+for player_amount in range(number_negative):
+    player_static = []
+    new_static_table_Heading_n = new_static_table_Heading_n_gen()
+    for ability_type in new_static_table_Heading_n.keys():
+        player_static.append(choice(new_static_table_Heading_n[ability_type]))
+    all_player_static.append(player_static)
+
+for player_amount in range(number_positive):
+    player_static = []
+    new_static_table_Sliding_Tackle_p = new_static_table_Sliding_Tackle_p_gen()
+    for ability_type in new_static_table_Sliding_Tackle_p.keys():
+        player_static.append(choice(new_static_table_Sliding_Tackle_p[ability_type]))
+    all_player_static.append(player_static)
+
+for player_amount in range(number_negative):
+    player_static = []
+    new_static_table_Sliding_Tackle_n = new_static_table_Sliding_Tackle_n_gen()
+    for ability_type in new_static_table_Sliding_Tackle_n.keys():
+        player_static.append(choice(new_static_table_Sliding_Tackle_n[ability_type]))
+    all_player_static.append(player_static)
+
+
+
+
